@@ -1,27 +1,27 @@
 {
   "name": "nodebb-plugin-sso-weibo",
-  "version": "0.5.2",
-  "description": "NodeBB Twitter SSO",
+  "version": "0.1.0",
+  "description": "NodeBB Weibo SSO",
   "main": "library.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/julianlam/nodebb-plugin-sso-weibo"
+    "url": "https://github.com/zheng1/nodebb-plugin-sso-weibo"
   },
   "keywords": [
     "nodebb",
     "plugin",
-    "twitter",
+    "weibo",
     "sso",
     "single sign on",
     "registration"
   ],
   "author": {
-    "name": "Julian Lam",
-    "email": "julian@nodebb.org"
+    "name": "Zhengyi Lai",
+    "email": "laizhyi@gmail.com"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/julianlam/nodebb-plugin-sso-weibo/issues"
+    "url": "https://github.com/zheng1/nodebb-plugin-sso-weibo/issues"
   },
   "readme": "",
   "readmeFilename": "README.md",
