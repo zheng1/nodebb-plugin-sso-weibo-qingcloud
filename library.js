@@ -39,7 +39,7 @@
 				clientSecret: meta.config['social:weibo:secret'],
 				callbackURL: nconf.get('url') + '/auth/weibo/callback'
 			}, function(token, tokenSecret, profile, done) {
-				Weibo.login(profile.id, profile.username, profile.photos, function(err, user) {
+				Weibo.login(profile.id, profile.displayName, function(err, user) {
 					if (err) {
 						return done(err);
 					}
@@ -59,7 +59,7 @@
 		callback(null, strategies);
 	};
 
-	Weibo.login = function(wbid, handle, photos, callback) {
+	Weibo.login = function(wbid, handle, callback) {
 		Weibo.getUidByWeiboId(wbid, function(err, uid) {
 			if(err) {
 				return callback(err);
@@ -80,14 +80,6 @@
 					// Save weibo-specific information to the user
 					user.setUserField(uid, 'wbid', wbid);
 					db.setObjectField('wbid:uid', wbid, uid);
-
-					// Save their photo, if present
-					if (photos && photos.length > 0) {
-						var photoUrl = photos[0].value;
-						photoUrl = path.dirname(photoUrl) + '/' + path.basename(photoUrl, path.extname(photoUrl)).slice(0, -6) + 'bigger' + path.extname(photoUrl);
-						user.setUserField(uid, 'uploadedpicture', photoUrl);
-						user.setUserField(uid, 'picture', photoUrl);
-					}
 
 					callback(null, {
 						uid: uid
