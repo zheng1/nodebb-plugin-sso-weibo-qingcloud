@@ -1,11 +1,11 @@
 {
-  "name": "nodebb-plugin-sso-weibo",
+  "name": "nodebb-plugin-sso-weibo-qingcloud",
   "version": "0.1.0",
   "description": "NodeBB Weibo SSO",
   "main": "library.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/zheng1/nodebb-plugin-sso-weibo"
+    "url": "https://github.com/zheng1/nodebb-plugin-sso-weibo-qingcloud"
   },
   "keywords": [
     "nodebb",
@@ -21,7 +21,7 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zheng1/nodebb-plugin-sso-weibo/issues"
+    "url": "https://github.com/zheng1/nodebb-plugin-sso-weibo-qingcloud/issues"
   },
   "readme": "",
   "readmeFilename": "README.md",

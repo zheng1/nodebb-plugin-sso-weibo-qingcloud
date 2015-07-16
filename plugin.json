@@ -1,13 +1,11 @@
 {
-	"id": "nodebb-plugin-sso-weibo",
+	"id": "nodebb-plugin-sso-weibo-qingcloud",
 	"name": "NodeBB Weibo SSO",
 	"description": "NodeBB Plugin that allows users to login/register via their Weibo account.",
-	"url": "https://github.com/zheng1/nodebb-plugin-sso-weibo",
+	"url": "https://github.com/zheng1/nodebb-plugin-sso-weibo-qingcloud",
 	"library": "./library.js",
 	"hooks": [
 		{ "hook": "filter:auth.init", "method": "getStrategy" },
-		{ "hook": "filter:admin.header.build", "method": "addMenuItem" },
-		{ "hook": "static:app.load", "method": "init" },
 		{ "hook": "filter:user.delete", "method": "deleteUserData" }
 	],
 	"templates": "./templates"
